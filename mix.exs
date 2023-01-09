@@ -25,7 +25,8 @@ defmodule MyApp.MixProject do
       {:plug, "~> 1.13"},
       {:plug_cowboy, "~> 2.0"},
       {:jason, "~> 1.4"},
-      {:hackney, "~> 1.18"}
+      {:hackney, "~> 1.18"},
+      {:mock, "~> 0.3.0", only: :test}
     ]
   end
 end
