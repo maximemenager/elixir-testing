@@ -15,7 +15,13 @@ defmodule MyApp.Application do
     Supervisor.start_link(children, opts)
   end
 
-  def children(:test), do: []
+  def children(:test),
+    do: [
+      {Plug.Cowboy,
+       scheme: :http,
+       plug: MyApp.MockStipeServer,
+       options: [port: System.get_env("MOCK_SERVER_PORT", "4001") |> String.to_integer()]}
+    ]
 
   def children(_) do
     [
