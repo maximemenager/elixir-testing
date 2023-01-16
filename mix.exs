@@ -7,7 +7,13 @@ defmodule MyApp.MixProject do
       version: "0.1.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      preferred_cli_env: [
+        vcr: :test,
+        "vcr.delete": :test,
+        "vcr.check": :test,
+        "vcr.show": :test
+      ]
     ]
   end
 
@@ -25,7 +31,9 @@ defmodule MyApp.MixProject do
       {:plug, "~> 1.13"},
       {:plug_cowboy, "~> 2.0"},
       {:jason, "~> 1.4"},
-      {:hackney, "~> 1.18"}
+      {:hackney, "~> 1.18"},
+      {:exvcr, "~> 0.11", only: :test},
+      {:httpoison, "~> 1.8", only: :test}
     ]
   end
 end

@@ -15,8 +15,6 @@ defmodule MyApp.Application do
     Supervisor.start_link(children, opts)
   end
 
-  def children(:test), do: []
-
   def children(_) do
     [
       {Plug.Cowboy,

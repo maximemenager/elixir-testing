@@ -1,0 +1,26 @@
+[
+  {
+    "request": {
+      "body": "{\"credit_card\":\"0000\"}",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "http://localhost:4000/make_payment"
+    },
+    "response": {
+      "binary": false,
+      "body": "",
+      "headers": {
+        "cache-control": "max-age=0, private, must-revalidate",
+        "content-length": "0",
+        "date": "Mon, 16 Jan 2023 10:02:52 GMT",
+        "server": "Cowboy"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
